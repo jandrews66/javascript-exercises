@@ -1,6 +1,10 @@
 const removeFromArray = function(numsArray, ...theArgs) {
-  for (const arg of theArgs){
-  numsArray.splice((arg -1),1);
+  
+  for (const arg of theArgs){ 
+  const index = numsArray.indexOf(arg)
+    if (index > -1){
+      numsArray.splice(index,1);
+    }
   }
   return numsArray;
 }
@@ -9,5 +13,7 @@ const removeFromArray = function(numsArray, ...theArgs) {
  module.exports = removeFromArray;
 
 
-
+//for (const arg of theArgs){
+//numsArray.splice((arg -1),1);
+  //}
 
